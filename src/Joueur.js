@@ -13,6 +13,7 @@ class Joueur{
     constructor(name,scoreId,Tableau1,x){
         this.Tableau2 = Tableau1;
         this.nom = name
+        this.htmlId = scoreId;
         this.playerpad=this.Tableau2.physics.add.sprite(x,700,'carre').setOrigin(0.0);
         this.playerpad.body.setSize(200,20)
         this.playerpad.setImmovable(true)
