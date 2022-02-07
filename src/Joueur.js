@@ -1,17 +1,18 @@
 class Joueur{
 
     constructor(name,Tableau1,x){
-        this.Tableau2 = Tableau1;
-        this.nom = name
-        this.playerpad=this.Tableau2.physics.add.sprite(x,700,'carre').setOrigin(0.0);
+        this.scene = Tableau1;
+        this.name = name
+
+        this.playerpad=this.scene.physics.add.sprite(x,700,'carre').setOrigin(0.0);
         this.playerpad.body.setSize(200,20)
         this.playerpad.setImmovable(true)
         this.playerpad.setVelocityY(0)
         this.playerpad.setVelocityX(0)
 
         let me=this
-        this.Tableau2.physics.add.collider(this.playerpad, this.Tableau2.Mainball.ball, function () {
-            me.Tableau2.renvoie(me.playerpad)
+        this.scene.physics.add.collider(this.playerpad, this.scene.Mainball.ball, function () {
+            me.scene.renvoie(me.playerpad)
         })
 
     }

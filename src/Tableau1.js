@@ -6,7 +6,12 @@ class Tableau1 extends Phaser.Scene{
     }
 
     create(){
-        this.NewPlayer = new Joueur('Jones','NewPlayer',this,500);
+        this.NewPlayer = this.physics.add.sprite(200,700,'carre').setOrigin(0.0);
+        this.NewPlayer.setDisplaySize(200,20);
+        this.NewPlayer.setImmovable(true);
+        this.NewPlayer.body.setAllowGravity(false);
+
+
         this.Mainball = new Ball(this);
     }
 
