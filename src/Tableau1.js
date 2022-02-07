@@ -6,9 +6,8 @@ class Tableau1 extends Phaser.Scene{
     }
 
     create(){
-        this.start=new Start(this);
-        start.startGame()
         this.NewPlayer = new Joueur('Jones','NewPlayer',this,500);
+        this.Mainball = new Ball(this);
     }
 
     resetScore(){
@@ -34,6 +33,7 @@ class Tableau1 extends Phaser.Scene{
             this.Mainball.ball.setVelocityX(this.Mainball.ball.body.velocity.x * 1.05)
         }
     }
+
 
 
 
