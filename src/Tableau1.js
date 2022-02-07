@@ -32,6 +32,17 @@ class Tableau1 extends Phaser.Scene{
         this.haut.setImmovable(true);
         this.haut.body.setAllowGravity(false);
 
+        let me = this;
+
+        this.physics.add.collider(this.NewPlayer, this.Mainball,function(){
+            //console.log('touche player 1')
+            me.renvoie(me.NewPlayer)
+        })
+
+        this.physics.add.collider(this.Mainball, this.gauche)
+        this.physics.add.collider(this.Mainball, this.droite)
+        this.physics.add.collider(this.Mainball, this.haut)
+
 
     }
 
@@ -50,12 +61,12 @@ class Tableau1 extends Phaser.Scene{
         /*
         on recupère la position de la balle sur la raquette pour créer un angle de rebond différent selon la raquette
          */
-        this.rando=this.Mainball.ball.y-player.y
+        this.rando=this.Mainball.y-this.NewPlayer.y
         this.coeff=this.rando/100
         this.coeff=this.coeff*10-5
-        this.Mainball.ball.setVelocityY(this.Mainball.ball.body.velocity.y+this.coeff*50)
+        this.Mainball.setVelocityY(this.Mainball.body.velocity.y+this.coeff*50)
         if (this.lock==0) {
-            this.Mainball.ball.setVelocityX(this.Mainball.ball.body.velocity.x * 1.05)
+            this.Mainball.setVelocityX(this.Mainball.body.velocity.x * 1.05)
         }
     }
 
