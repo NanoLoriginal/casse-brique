@@ -20,11 +20,17 @@ class Controle {
             if (event.key === "LEFT") {
                 me.scene.joueurGauche.gauche();
             }
-            if (event.key === "j") {
-                me.scene.joueurDroite.monte();
+            event.preventDefault();
+        }, true);
+        window.addEventListener("keyup", function (event) {
+            if (event.defaultPrevented) {
+                return; // jje ne sais pas à quoi ça sert
             }
-            if (event.key === "n") {
-                me.scene.joueurDroite.descend();
+            if (event.key === "RIGHT") {
+                me.scene.joueurGauche.immobile();
+            }
+            if (event.key === "LEFT") {
+                me.scene.joueurGauche.immobile();
             }
             event.preventDefault(); // je ne sais pas à quoi ça sert
         }, true);
