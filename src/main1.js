@@ -2,7 +2,7 @@ let gameConfig = {
     type: Phaser.AUTO,
     width: 1280,
     height: 720,
-    backgroundColor: '#00000',
+    backgroundColor: '#FFFFF',
     parent: 'game',
     disableWebAudio: true,
     physics: {

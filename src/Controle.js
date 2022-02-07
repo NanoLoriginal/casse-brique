@@ -3,11 +3,9 @@ class Controle {
         this.scene = Tableau1
         this.InitKeyboard()
     }
-
     /*
      * création de la méthode pour utiliser le clavier
      */
-
     InitKeyboard(){
         let me = this;
         window.addEventListener("keydown", function (event) {
@@ -15,10 +13,10 @@ class Controle {
                 return; // je ne sais pas à quoi ça sert
             }
             if (event.key === "RIGHT") {
-                me.scene.joueurGauche.droite();
+                me.scene.NewPlayer.droite();
             }
             if (event.key === "LEFT") {
-                me.scene.joueurGauche.gauche();
+                me.scene.NewPlayer.gauche();
             }
             event.preventDefault();
         }, true);
@@ -27,15 +25,13 @@ class Controle {
                 return; // jje ne sais pas à quoi ça sert
             }
             if (event.key === "RIGHT") {
-                me.scene.joueurGauche.immobile();
+                me.scene.NewPlayer.immobile();
             }
             if (event.key === "LEFT") {
-                me.scene.joueurGauche.immobile();
+                me.scene.NewPlayer.immobile();
             }
             event.preventDefault(); // je ne sais pas à quoi ça sert
         }, true);
-
-
 
     }
 }
