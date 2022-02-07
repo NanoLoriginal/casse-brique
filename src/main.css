@@ -1,0 +1,20 @@
+body{
+    overflow: hidden;
+
+    font-family: "lostwage", Arial, sans-serif;
+    font-size: 12px;
+    background-color: #454341;
+    text-align: center;
+}
+
+#game{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+
+}
+canvas{
+    outline: 1px solid #333;
+}
