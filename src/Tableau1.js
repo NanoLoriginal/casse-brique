@@ -6,7 +6,7 @@ class Tableau1 extends Phaser.Scene{
     }
 
     create(){
-        this.Xvitesse = 35;
+        this.Xvitesse = 50;
         this.NewPlayer = this.physics.add.sprite(300,700,'carre').setOrigin(0.0);
         this.NewPlayer.setDisplaySize(200,20);
         this.NewPlayer.setImmovable(true);
