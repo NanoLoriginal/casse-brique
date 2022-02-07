@@ -3,8 +3,11 @@ body{
 
     font-family: "lostwage", Arial, sans-serif;
     font-size: 12px;
-    background-color: #454341;
+    background-color: #575757;
     text-align: center;
+}
+#Bg{
+    display: flex;
 }
 
 #game{
@@ -15,6 +18,7 @@ body{
     min-height: 90vh;
 
 }
+
 canvas{
     outline: 1px solid #ffffff;
 }

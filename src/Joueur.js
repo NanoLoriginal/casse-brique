@@ -1,6 +1,16 @@
 class Joueur{
 
-    constructor(name,Tableau1,x){
+    get score() {
+        return this._score;
+    }
+
+    set score(value) {
+        this._score = value;
+        this.$score.textContent=  this._score
+
+    }
+
+    constructor(name,scoreId,Tableau1,x){
         this.scene = Tableau1;
         this.nom = name
         this.playerpad=this.scene.physics.add.sprite(x,700,'carre').setOrigin(0.0);
@@ -9,7 +19,10 @@ class Joueur{
         this.playerpad.setVelocityY(0)
         this.playerpad.setVelocityX(0)
 
-
+        this.$el = document.getElementById(scoreId);
+        this.$score = this.$el.querySelector(".score")
+        this.$name = this.$el.querySelector(".name")
+        this.$name.textContent=name;
     }
 
     droite(){
