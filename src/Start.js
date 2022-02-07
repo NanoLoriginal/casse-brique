@@ -3,6 +3,7 @@ class Start{
         this.scene = Tableau1;
 
     }
+
     startGame(){
         this.Wscreen = 1280;
         this.Hscreen = 720;

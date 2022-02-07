@@ -7,8 +7,12 @@ class Tableau1 extends Phaser.Scene{
     }
 
     create(){
+        this.start=new Start(this);
+        start.startGame()
+    }
 
-
+    resetScore(){
+        this.NewPlayer.score=0
     }
 
 
