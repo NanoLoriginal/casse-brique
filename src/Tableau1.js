@@ -3,12 +3,12 @@ class Tableau1 extends Phaser.Scene{
     preload(){
         this.load.image('carre','assets/carre.png');
         this.load.image('cercle','assets/cercle.png');
-
     }
 
     create(){
         this.start=new Start(this);
         start.startGame()
+        this.NewPlayer = new Joueur('Jones','NewPlayer',this,500);
     }
 
     resetScore(){
@@ -19,6 +19,7 @@ class Tableau1 extends Phaser.Scene{
         if(player.x==80){
             this.detect=1
         }
+
         if(player.x==1180){
             this.detect=0
         }
