@@ -20,6 +20,7 @@ class Controle {
             }
             event.preventDefault();
         }, true);
+
         window.addEventListener("keyup", function (event) {
             if (event.defaultPrevented) {
                 return; // jje ne sais pas à quoi ça sert

@@ -5,8 +5,8 @@ class Start{
     }
 
     startGame(){
-        this.Wscreen = 1280;
-        this.Hscreen = 720;
+        this.Wscreen = 800;
+        this.Hscreen = 800;
         this.controle = new Controle(this) //initialisation des contrôles des joueurs en appellant le constructeur de la classe controle
 
         this.NewPlayer = new Joueur('Joueur 1',this,800);
