@@ -171,6 +171,12 @@ class Tableau1 extends Phaser.Scene{
 
 
     update(){
+        if(this.NewPlayer.x >= 610){
+            this.NewPlayer.x = 600
+        }
+        if(this.NewPlayer.x <= -10){
+            this.NewPlayer.x = 0
+        }
 
     }
 
